@@ -1,0 +1,10 @@
+.studentDiv {
+    border: 1px solid black;
+    min-width: 24%;
+}
+
+.allStudents {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+}
