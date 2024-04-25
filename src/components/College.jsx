@@ -3,7 +3,7 @@ import data from "../data";
 import StudentList from "./StudentList"
 
 const College = () => {
-    let tempVal
+    
     const [studentData, setStudentData] = useState(data);
     let addStudent = (e) => {
         e.preventDefault()
@@ -11,7 +11,6 @@ const College = () => {
         let newData = studentData;
         newData.push({id: document.getElementById("id").value, name: document.getElementById("studentName").value, age: document.getElementById("age").value, course: document.getElementById("course").value})
         setStudentData(newData);
-        tempVal = studentData
         console.log(newData);
         // document.getElementById("test").innerHTML = <StudentList data={studentData}/>
         
@@ -35,8 +34,9 @@ const College = () => {
             <input id="id" type="number"></input>
             <button type="submit" onClick={(e)=>addStudent(e)}>Add</button>
         </form>
-        <div id="test"><StudentList data={tempVal}></StudentList></div>
-        </>   
+        <div id="test"><StudentList data={studentData}></StudentList></div>
+        </>    
+        
     )
 }
 
